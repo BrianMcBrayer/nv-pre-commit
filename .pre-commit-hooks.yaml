@@ -1,0 +1,6 @@
+- id: detect-nv-keys
+  name: detect private keys
+  description: detects the presence of private keys.
+  entry: detect-nv-keys
+  language: python
+  types: [text]
