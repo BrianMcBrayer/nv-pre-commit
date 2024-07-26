@@ -8,7 +8,7 @@ Add this to your `.pre-commit-config.yaml`
 
 ```yaml
 - repo: https://github.com/tuttlebr/nv-pre-commit
-  rev: v0.0.1 # Use the ref you want to point at
+  rev: v0.0.3 # Use the ref you want to point at
   hooks:
     - id: detect-nv-keys
   # -   id: ...
