@@ -4,6 +4,8 @@ import argparse
 import re
 from typing import Sequence
 
+NGC_PAT_EXPRESSION = re.compile(r"(nvapi-[a-zA-Z0-9_-]{64})")
+NGC_API_EXPRESSION = re.compile(r"[A-z0-9]{84}")
 
 def warning(keys: Sequence[str]) -> Sequence:
     hidden_keys = []
@@ -13,14 +15,12 @@ def warning(keys: Sequence[str]) -> Sequence:
 
 
 def detect_pat(text_body: str) -> Sequence:
-    ngc_pat_expression = re.compile("nvapi-[A-z0-9]{21}\-[A-z0-9]{7}\-[A-z0-9]{34}")
-    keys = ngc_pat_expression.findall(text_body)
+    keys = NGC_PAT_EXPRESSION.findall(text_body)
     return keys
 
 
 def detect_api_key(text_body: str) -> Sequence:
-    ngc_api_expression = re.compile("[A-z0-9]{84}")
-    keys = ngc_api_expression.findall(text_body)
+    keys = NGC_API_EXPRESSION.findall(text_body)
     return keys
 
 
