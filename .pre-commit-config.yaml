@@ -38,3 +38,9 @@ repos:
       - id: beautysh
         name: beautysh (bash)
         args: ["--indent-size=2", "--force-function-style=fnpar"]
+  - repo: https://github.com/christophmeissner/pytest-pre-commit
+    rev: 1.0.0
+    hooks:
+    - id: pytest
+      pass_filenames: false
+      always_run: true
