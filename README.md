@@ -4,11 +4,13 @@ Some NVIDIA specific hooks for pre-commit.
 
 ### Using pre-commit-hooks with pre-commit
 
+Install pre-commit (see https://pre-commit.com/)
+
 Add this to your `.pre-commit-config.yaml`
 
 ```yaml
 - repo: https://github.com/tuttlebr/nv-pre-commit
-  rev: v0.0.3 # Use the ref you want to point at
+  rev: v0.0.5 # Use the ref you want to point at
   hooks:
     - id: detect-nv-keys
   # -   id: ...
